@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">  
+
+    <h:head>
+        <title>Reserva Sala de Aula - Cadastro de Professor</title>
+        <link rel="stylesheet" type="text/css" href="css/cadastroProfessor.css"/> 
+    </h:head>
+    <h:body>   
+
+        <nav id="navbar">
+            <h:outputLink value="index.xhtml" class="link_menu">Página Inicial</h:outputLink> 
+            <h:outputLink value="reservaSala.xhtml" class="link_menu">Reserva Sala</h:outputLink> 
+            <h:outputLink value="cadastroProfessor.xhtml" class="link_menu">Cadastro Professor</h:outputLink>
+            <h:outputLink value="reservaEquipamento.xhtml" class="link_menu">Reserva Equipamento</h:outputLink>
+        </nav>
+
+        <p:fieldset legend="Cadastro Professor" id="form_cadastrar_professor">
+            <h:form>
+                <p:growl id="growl" life="9000" />
+                <p:panelGrid columns="2">
+
+                    <p:outputLabel value="Nome" for="name">
+                        <br/>
+                        <h:message for="name" errorStyle="color:darked;font-size:14px;"></h:message> 
+                    </p:outputLabel>
+                    <p:inputText id="name" value="#{professorBean.professor.nome}" title="Nome" required="true" 
+                                 requiredMessage="O campo NOME é obrigatório."
+                                 placeholder="Ex.:João da Silva"></p:inputText>
+
+                    <p:outputLabel value="SIAPE" for="siape">
+                        <br/>
+                        <h:message for="siape" errorStyle="color:darked;font-size:14px;"></h:message>
+                    </p:outputLabel>
+                    <p:inputText id="siape" value="#{professorBean.professor.siape}" title="siape" required="true" 
+                                 requiredMessage="O campo SIAPE é obrigatório."/>
+
+                    <p:outputLabel value="Senha" for="senha">
+                        <br/>
+                        <h:message for="senha" errorStyle="color:darked;font-size:14px;"></h:message>
+                    </p:outputLabel>
+                    <p:inputText id="senha" value="#{professorBean.professor.senha}" title="senha" required="true" 
+                                 requiredMessage="O campo SENHA é obrigatório."/> 
+                </p:panelGrid>
+
+                <br/>
+                <p:commandButton value="Cadastrar" actionListener="#{professorBean.salvar()}"
+                                 onclick="return confirm('Confirma o cadastro desse professor?')" 
+                                 id="btn_cadastrar_professor" ajax="false">
+                </p:commandButton>
+            </h:form>
+        </p:fieldset>
+    </h:body>
+</html>  

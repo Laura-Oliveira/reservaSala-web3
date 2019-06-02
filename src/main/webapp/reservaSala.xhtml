@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">  
+    <h:head>
+        <title>Reserva Sala</title>
+        <link rel="stylesheet" type="text/css" href="css/reservaSala.css"/> 
+        <!-- Problema em mapear variavel tipo de sala da entidade -->
+        <!-- Problema em mapear variavel quantidade equipamento da entidade -->
+    </h:head>
+    <h:body>
+        <nav id="navbar">
+            <h:outputLink value="index.xhtml" class="link_menu">Página Inicial</h:outputLink> 
+            <h:outputLink value="reservaSala.xhtml" class="link_menu">Reserva Sala</h:outputLink> 
+            <h:outputLink value="cadastroProfessor.xhtml" class="link_menu">Cadastro Professor</h:outputLink>
+            <h:outputLink value="reservaEquipamento.xhtml" class="link_menu">Reserva Equipamento</h:outputLink>
+        </nav>
+
+
+        <p:fieldset legend="Reserva Sala" id="form_info_sala">
+            <h:form>
+                <p:growl id="growl" life="9000" />
+                <p:panelGrid columns="2">
+                    <p:outputLabel value="Professor:" for="nome_professor">
+                        <br/>
+                        <h:message for="nome_professor" errorStyle="color:darked;font-size:14px;"></h:message>
+                    </p:outputLabel>
+
+                    <p:inputText value="#{professorBean.professor.nome}" id="nome_professor" required="true" 
+                                 requiredMessage="O campo PROFESSOR é obrigatório." placeholder="Ex.:Mariana Silva"/>
+
+                    <p:outputLabel value="Sala:" for="nome_sala">
+                        <br/>
+                        <h:message for="nome_sala" errorStyle="color:darked;font-size:14px;"></h:message>
+                    </p:outputLabel>
+                    <p:inputText value="#{salaBean.sala.nome}" id="nome_sala" required="true" 
+                                 requiredMessage="O campo SALA é obrigatório."/>
+
+                    <p:outputLabel value="Localização:" for="localizacao" >
+                        <br/>
+                        <h:message for="localizacao" errorStyle="color:darked;font-size:14px;"></h:message>
+                    </p:outputLabel>
+                    <p:inputText value="#{salaBean.sala.localizacao}" id="localizacao" required="true" 
+                                 requiredMessage="O campo LOCALIZAÇÃO é obrigatório."/>
+
+                    <p:outputLabel value="Capacidade:" for="capacidade"/>
+                    <h:inputText value="#{salaBean.sala.capacidade}" id="capacidade"/>
+
+                    <p:outputLabel value="Tipo de sala:" for="tipo_sala"/>
+
+                    <p:inputText value="#{salaBean.sala.aulas}" id="tipo_sala" />
+
+                    <p:outputLabel value="Equipamento:" for="equipamento">
+                    </p:outputLabel>
+                    <p:inputText value="#{equipamentoBean.equipamento.nome}" id="equipamento"/>
+
+                    <p:outputLabel value="Marca:" for="marca" />
+                    <p:inputText value="#{equipamentoBean.equipamento.marca}" id="marca" />
+
+                    <p:outputLabel value="Quantidade:" for="equipamento_quantidade">
+                    </p:outputLabel>
+                    <p:inputText value="#{equipamentoBean.equipamento.item}" id="equipamento_quantidade" />
+                </p:panelGrid>
+
+                <br/>
+                <p:commandButton value="Reservar" actionListener="#{professorBean.salvar()}"
+                                 onclick="return confirm('Confirma a reserva dessa sala?')" 
+                                 id="btn_reserva_sala" ajax="false">
+                </p:commandButton>
+            </h:form>
+        </p:fieldset>
+    </h:body>
+</html>
+
