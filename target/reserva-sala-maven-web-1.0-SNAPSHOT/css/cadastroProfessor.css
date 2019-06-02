@@ -1,0 +1,43 @@
+/* ====================== ESTILOS CADASTRO PROFESSOR ================================= */
+#navbar
+{
+    background-color: blueviolet;
+    padding: 20px;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.link_menu
+{
+    padding-top: 2em;
+    margin-right: 1em;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#form_cadastrar_professor
+{
+    width: 23em;
+    height: 23em;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10em;
+}
+
+form
+{
+    margin-top: 2em;
+    margin-left: 2em;
+    
+}
+
+#btn_cadastrar_professor
+{
+    background-color: blueviolet;
+    color: white;
+    margin: 0 auto;
+}

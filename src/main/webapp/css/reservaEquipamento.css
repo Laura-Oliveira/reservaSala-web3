@@ -1,0 +1,44 @@
+/* ====================== ESTILOS RESERVA EQUIPAMENTO ================================= */
+#navbar
+{
+    background-color: blueviolet;
+    padding: 20px;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.link_menu
+{
+    padding-top: 2em;
+    margin-right: 1em;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#form_equipamento
+{
+    width: 23em;
+    height: 20em;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10em;
+}
+
+form
+{
+    margin-top: 2em;
+    margin-left: 2em;
+
+}
+
+#btn_reserva_equipamento
+{
+    background-color: blueviolet;
+    color: white;
+    margin: 0 auto;
+}
+
