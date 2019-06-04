@@ -1,10 +1,14 @@
-reserva/sala/entidade/ItemEquipamento.class
 reserva/sala/entidade/Equipamento.class
-reserva/sala/entidade/Sala.class
 reserva/sala/entidade/AbstractEntity.class
 reserva/sala/beans/EquipamentoBean.class
 reserva/sala/beans/ProfessorBean.class
+reserva/sala/servico/EquipamentoService.class
+reserva/sala/servico/ProfessorService.class
+reserva/sala/entidade/ItemEquipamento.class
+reserva/sala/entidade/Sala.class
+reserva/sala/servico/SalaService.class
 reserva/sala/entidade/Professor.class
 reserva/sala/beans/SalaBean.class
+reserva/sala/servico/Service.class
 reserva/sala/entidade/Aula.class
 reserva/sala/entidade/LogSistema.class

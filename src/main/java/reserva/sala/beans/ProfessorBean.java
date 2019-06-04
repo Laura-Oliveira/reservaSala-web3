@@ -9,14 +9,15 @@ import reserva.sala.entidade.Professor;
 import javax.ejb.EJB;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
+import reserva.sala.servico.ProfessorService;
 
 @ManagedBean
 @ApplicationScoped
 public class ProfessorBean 
 {
     
-   // @EJB
-  //  private ProfessorService professorService;
+    @EJB
+    private ProfessorService professorService;
     
     private Professor professorBean;
     
@@ -27,7 +28,7 @@ public class ProfessorBean
     
     public void adicionar() 
     {
-       // professorService.add(professor);
+       professorService.persistence(professorBean);
     } 
 
     public Professor getProfessor() 
@@ -42,10 +43,9 @@ public class ProfessorBean
     
     public void salvar()
     {
-       /* this.professorService.persistence(this.professorBean);
+        this.professorService.persistence(this.professorBean);
         this.professorBean = new Professor();
-        addMessage("Usuario cadastrado com sucesso!");
-        this.professorBean = null; */
+        this.professorBean = null; 
     } 
     
 }

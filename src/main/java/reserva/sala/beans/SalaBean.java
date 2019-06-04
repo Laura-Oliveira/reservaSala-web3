@@ -9,6 +9,7 @@ import reserva.sala.entidade.Sala;
 import javax.ejb.EJB;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
+import reserva.sala.servico.SalaService;
 
 
 @ManagedBean
@@ -16,8 +17,8 @@ import javax.faces.bean.ManagedBean;
 public class SalaBean 
 {
     
- //   @EJB
- //   private SalaService salaService;
+   @EJB
+   private SalaService salaService;
     
     private Sala salaBean;
     
@@ -26,9 +27,10 @@ public class SalaBean
         salaBean = new Sala();
     }
     
- /*   public void adicionar() {
-        salaService.add(sala);
-    } */
+    public void adicionar() 
+    {
+        salaService.persistence(salaBean);
+    } 
 
     public Sala getSala() 
     {
@@ -40,8 +42,10 @@ public class SalaBean
         this.salaBean = sala;
     }
     
-    public void adicionar()
+    public void salvar()
     {
-        //
-    }
+        this.salaService.persistence(this.salaBean);
+        this.salaBean = new Sala();
+        this.salaBean = null; 
+    } 
 }

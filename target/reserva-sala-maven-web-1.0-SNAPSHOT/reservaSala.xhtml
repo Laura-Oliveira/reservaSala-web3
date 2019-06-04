@@ -8,8 +8,6 @@
     <h:head>
         <title>Reserva Sala</title>
         <link rel="stylesheet" type="text/css" href="css/reservaSala.css"/> 
-        <!-- Problema em mapear variavel tipo de sala da entidade -->
-        <!-- Problema em mapear variavel quantidade equipamento da entidade -->
     </h:head>
     <h:body>
         <nav id="navbar">
@@ -53,20 +51,10 @@
 
                     <p:inputText value="#{salaBean.sala.aulas}" id="tipo_sala" />
 
-                    <p:outputLabel value="Equipamento:" for="equipamento">
-                    </p:outputLabel>
-                    <p:inputText value="#{equipamentoBean.equipamento.nome}" id="equipamento"/>
-
-                    <p:outputLabel value="Marca:" for="marca" />
-                    <p:inputText value="#{equipamentoBean.equipamento.marca}" id="marca" />
-
-                    <p:outputLabel value="Quantidade:" for="equipamento_quantidade">
-                    </p:outputLabel>
-                    <p:inputText value="#{equipamentoBean.equipamento.item}" id="equipamento_quantidade" />
                 </p:panelGrid>
 
                 <br/>
-                <p:commandButton value="Reservar" actionListener="#{professorBean.salvar()}"
+                <p:commandButton value="Reservar" actionListener="#{salaBean.salvar()}"
                                  onclick="return confirm('Confirma a reserva dessa sala?')" 
                                  id="btn_reserva_sala" ajax="false">
                 </p:commandButton>

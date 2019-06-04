@@ -9,14 +9,15 @@ import reserva.sala.entidade.Equipamento;
 import javax.ejb.EJB;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
+import reserva.sala.servico.EquipamentoService;
 
 @ManagedBean
 @ApplicationScoped
 public class EquipamentoBean 
 {
     
- //   @EJB
-  //  private EquipamentoService equipamentoService;
+    @EJB
+    private EquipamentoService equipamentoService;
     
     private Equipamento equipamentoBean;
     
@@ -27,7 +28,7 @@ public class EquipamentoBean
     
     public void adicionar() 
     {
-        //equipamentoService.add(equipamento);
+        equipamentoService.persistence(equipamentoBean);
     } 
 
     public Equipamento getEquipamento() 
@@ -40,9 +41,11 @@ public class EquipamentoBean
         this.equipamentoBean = equipamento;
     }
     
-    public void salvar()
+   public void salvar()
     {
-        
-    }
+        this.equipamentoService.persistence(this.equipamentoBean);
+        this.equipamentoBean = new Equipamento();
+        this.equipamentoBean = null; 
+    } 
     
 }
