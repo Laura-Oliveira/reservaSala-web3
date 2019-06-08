@@ -7,10 +7,7 @@ package reserva.sala.entidade;
 
 import javax.persistence.*;
 
-/**
- *
- * @author lucas
- */
+
 @Entity
 @Table(name = "tb_item_quantidade")
 public class ItemEquipamento extends AbstractEntity<Long> {

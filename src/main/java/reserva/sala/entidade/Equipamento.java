@@ -16,12 +16,8 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-/**
- *
- * @author lucas
- */
 
-@NamedQueries(
+/*@NamedQueries(
         
         { @NamedQuery(name = "TodosEquipamentos",
                     query = "SELECT e FROM Equipamento e"),
@@ -36,7 +32,7 @@ import javax.validation.constraints.NotNull;
                     query = "SELECT e FROM Equipamento e WHERE e.nome = :nome"),
         
         }
-)
+) */
 @Entity
 @Table(name = "tb_equipamento")
 public class Equipamento extends AbstractEntity<Long>{
@@ -50,8 +46,8 @@ public class Equipamento extends AbstractEntity<Long>{
     private String marca;
     
     @NotNull(message = "O equipamento deve ter quantidade")
-    @Column(name = "quantidade")
-    private Integer quantidade;
+    @Column(name = "quantidadeEquipamento")
+    private Integer quantidadeEquipamento;
     
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "item_equipamento")
@@ -81,4 +77,11 @@ public class Equipamento extends AbstractEntity<Long>{
         this.item = item;
     }
         
+    public Integer getQuantidadeEquipamento() {
+        return quantidadeEquipamento;
+    }
+
+    public void setQuantidadeEquipamento(Integer quantidadeEquipamento) {
+        this.quantidadeEquipamento = quantidadeEquipamento;
+    }
 }

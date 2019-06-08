@@ -14,12 +14,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-/**
- *
- * @author lucas
- */
-
-
 @NamedQueries(
         
         { @NamedQuery(name = "TodosProfessor",

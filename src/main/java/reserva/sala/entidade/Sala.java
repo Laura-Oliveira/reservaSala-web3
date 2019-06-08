@@ -17,12 +17,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-/**
- *
- * @author laura
- */
-
-@NamedQueries(
+/*@NamedQueries(
         
         { @NamedQuery(name = "TodasSalas",
                       query = "SELECT s FROM Sala s"),
@@ -40,7 +35,7 @@ import javax.validation.constraints.NotNull;
                       query = "SELECT s FROM Sala s WHERE s.nome = :nome"),
           
         }
-)
+) */
 @Entity
 @Table(name = "tb_sala")
 public class Sala extends AbstractEntity<Long> {
@@ -58,8 +53,8 @@ public class Sala extends AbstractEntity<Long> {
     private Integer capacidade;
     
     @NotNull(message = "Informar o tipo da sala")
-    @Column(name = "tipo")
-    private String tipo;
+    @Column(name = "tipoSala")
+    private String tipoSala;
     
     @OneToMany(mappedBy = "sala")
     private List<Aula> aulas;
@@ -97,4 +92,11 @@ public class Sala extends AbstractEntity<Long> {
         this.aulas = aulas;
     }
     
+    public String getTipoSala() {
+        return tipoSala;
+    }
+
+    public void setTipoSala(String tipoSala) {
+        this.tipoSala = tipoSala;
+    }
 }

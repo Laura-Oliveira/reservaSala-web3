@@ -8,10 +8,6 @@ package reserva.sala.entidade;
 import java.io.Serializable;
 
 import javax.persistence.*;
-/**
- *
- * @author lucas
- */
 
 @MappedSuperclass
 public abstract class AbstractEntity<ID extends Serializable> implements Serializable {

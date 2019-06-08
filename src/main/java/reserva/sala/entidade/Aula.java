@@ -9,12 +9,6 @@ import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
 
-/**
- *
- * @author lucas
- */
-
-
 @NamedQueries(
         
         { @NamedQuery(name = "TodasAulas",

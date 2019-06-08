@@ -17,20 +17,22 @@ public class Service<T>
 
     /* Valida se já existe uma instancia dessa entidade */
     @TransactionAttribute(SUPPORTS)
-    public boolean exist(@NotNull T entidade) 
+    public boolean dontExist(@NotNull T entidade) 
     {
         return true;
     }
 
     public void persistence(@Valid T entidade) 
     {
-        if(!(exist(entidade)))
-        entityManager.persist(entidade);
+        if(dontExist(entidade))
+        {
+            entityManager.persist(entidade);
+        }
     }
 
     public void remover(@Valid T entidade) 
     {
-        if(!(exist(entidade)))
+        if((dontExist(entidade)))
         {
             entityManager.merge(entidade);
             entityManager.remove(entidade);

@@ -22,13 +22,6 @@
             <h:form>
                 <p:growl id="growl" life="9000" />
                 <p:panelGrid columns="2">
-                    <p:outputLabel value="Professor:" for="nome_professor">
-                        <br/>
-                        <h:message for="nome_professor" errorStyle="color:darked;font-size:14px;"></h:message>
-                    </p:outputLabel>
-
-                    <p:inputText value="#{professorBean.professor.nome}" id="nome_professor" required="true" 
-                                 requiredMessage="O campo PROFESSOR é obrigatório." placeholder="Ex.:Mariana Silva"/>
 
                     <p:outputLabel value="Sala:" for="nome_sala">
                         <br/>
@@ -49,7 +42,7 @@
 
                     <p:outputLabel value="Tipo de sala:" for="tipo_sala"/>
 
-                    <p:inputText value="#{salaBean.sala.aulas}" id="tipo_sala" />
+                    <p:inputText value="#{salaBean.sala.tipoSala}" id="tipo_sala" />
 
                 </p:panelGrid>
 
