@@ -1,0 +1,23 @@
+/* ================== ESTILO DA PAGINA INICIAL ========================= */
+
+#navbar
+{
+    display: block;
+    margin: 0 auto;
+    background-color: blueviolet;
+    font-weight: bold;
+    margin-top: 10em;
+    width: 15em;
+    height: 11em;
+    padding: 2em;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 2.7em;
+    border-radius: 10px;
+}
+
+.link_menu
+{
+    margin-bottom: 10em;
+}
+

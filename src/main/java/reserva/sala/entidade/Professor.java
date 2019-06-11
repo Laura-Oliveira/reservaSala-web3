@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package reserva.sala.entidade;
 
 import java.util.List;
@@ -13,26 +8,12 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-
-@NamedQueries(
-        
-        { @NamedQuery(name = "TodosProfessor",
-                      query = "SELECT p FROM Professor p"),
-            
-          @NamedQuery(name = "ProfessorPorSIAPE",
-                      query = "SELECT p FROM Professor p WHERE p.siape = :siape"),
-          
-          @NamedQuery(name = "ProfessoresPorNome",
-                      query = "SELECT p FROM Professor p WHERE p.nome = :nome"),
-          
-          @NamedQuery(name = "ProfessoresPorSenha",
-                      query = "SELECT p FROM Professor p WHERE p.senha = :senha"),
-        }
-)
+    
 @Entity
 @Table(name = "tb_professor")
 public class Professor extends AbstractEntity<Long>{
 
+     public static final String ALL_USERS = "AllUsers";
 	
     @NotNull(message = "O professor deve ter um nome.")
     @Column(name = "nm_professor")

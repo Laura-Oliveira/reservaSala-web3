@@ -49,4 +49,8 @@ public class ProfessorBean
         this.professorBean = null; 
     } 
     
+    public void listar()
+    {
+        this.professorService.listar();
+    }
 }

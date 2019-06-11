@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package reserva.sala.entidade;
 
 import java.util.List;
@@ -17,25 +12,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-/*@NamedQueries(
-        
-        { @NamedQuery(name = "TodasSalas",
-                      query = "SELECT s FROM Sala s"),
-          
-          @NamedQuery(name = "SalasPorLocalizacao",
-                      query = "SELECT s FROM Sala s WHERE s.localizacao = :localizacao"),
-          
-          @NamedQuery(name = "SalasPorCapacidade",
-                      query = "SELECT s FROM Sala s WHERE s.capacidade = :capacidade"),
-          
-          @NamedQuery(name = "SalasPorTipo",
-                      query = "SELECT s FROM Sala s WHERE s.tipo = :tipo"),
-          
-          @NamedQuery(name = "SalasPorNome",
-                      query = "SELECT s FROM Sala s WHERE s.nome = :nome"),
-          
-        }
-) */
 @Entity
 @Table(name = "tb_sala")
 public class Sala extends AbstractEntity<Long> {

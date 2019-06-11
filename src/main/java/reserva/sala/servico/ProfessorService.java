@@ -11,5 +11,5 @@ public class ProfessorService extends Service<Professor> {
     {
         return entityManager.createQuery("SELECT p FROM Professor p").getResultList();
     }
-            
+           
 }

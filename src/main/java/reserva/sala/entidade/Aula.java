@@ -1,36 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package reserva.sala.entidade;
 
 import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
 
-@NamedQueries(
-        
-        { @NamedQuery(name = "TodasAulas",
-                      query = "SELECT a FROM Aula a"),
-          
-          @NamedQuery(name = "AulasPorSala",
-                      query = "SELECT a FROM Aula a WHERE a.sala = :aula"),
-          
-          @NamedQuery(name = "AulasPorDuracao",
-                      query = "SELECT a FROM Aula a WHERE a.duracao = :duracao"),
-          
-          @NamedQuery(name = "AulasPorHora",
-                      query = "SELECT a FROM Aula a WHERE a.hora = :hora"),
-          
-          @NamedQuery(name = "AulasPorData",
-                      query = "SELECT a FROM Aula a WHERE a.data = :data"),
-          
-          @NamedQuery(name = "AulasPorProfessor",
-                      query = "SELECT a FROM Aula a WHERE a.professor = :professor")
-          
-        }
-)
 @Entity
 @Table(name = "tb_aula")
 public class Aula extends AbstractEntity<Long> {

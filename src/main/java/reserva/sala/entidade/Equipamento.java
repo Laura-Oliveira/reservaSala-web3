@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package reserva.sala.entidade;
 
 import javax.persistence.CascadeType;
@@ -16,23 +11,6 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-
-/*@NamedQueries(
-        
-        { @NamedQuery(name = "TodosEquipamentos",
-                    query = "SELECT e FROM Equipamento e"),
-        
-          @NamedQuery(name = "EquipamentosPorTipo",
-                    query = "SELECT e FROM Equipamento e WHERE e.tipo = :tipo"),
-          
-          @NamedQuery(name = "EquipamentosPorMarca",
-                    query = "SELECT e FROM Equipamento e WHERE e.marca = :marca"),
-          
-          @NamedQuery(name = "EquipamentosPorNome",
-                    query = "SELECT e FROM Equipamento e WHERE e.nome = :nome"),
-        
-        }
-) */
 @Entity
 @Table(name = "tb_equipamento")
 public class Equipamento extends AbstractEntity<Long>{
