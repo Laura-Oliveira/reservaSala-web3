@@ -5,7 +5,7 @@ import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 import reserva.sala.entidade.ItemEquipamento;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2019-06-11T20:13:40")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2019-06-11T21:07:40")
 @StaticMetamodel(Equipamento.class)
 public class Equipamento_ extends AbstractEntity_ {
 

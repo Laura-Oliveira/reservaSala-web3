@@ -9,7 +9,7 @@ import reserva.sala.entidade.ItemEquipamento;
 import reserva.sala.entidade.Professor;
 import reserva.sala.entidade.Sala;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2019-06-11T20:13:40")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2019-06-11T21:07:40")
 @StaticMetamodel(Aula.class)
 public class Aula_ extends AbstractEntity_ {
 

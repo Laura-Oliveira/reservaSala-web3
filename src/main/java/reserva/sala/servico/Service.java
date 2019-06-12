@@ -16,7 +16,6 @@ public class Service<T> {
     @PersistenceContext
     protected EntityManager entityManager;
 
-    /* Valida se já existe uma instancia dessa entidade */
     @TransactionAttribute(SUPPORTS)
     public boolean dontExist(@NotNull T entidade) {
         return true;
